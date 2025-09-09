@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl" class="dark scroll-smooth">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>أ. إسماعيل هشام | مدرس علوم بروفيشنال</title>
     <meta name="description" content="أ. إسماعيل هشام مدرس علوم بروفيشنال: شرح النظريات والمفاهيم العلمية بطريقة مبسطة مع تطبيقات عملية، منهج منظم، أمثلة تفاعلية، وتدريب مكثّف للتفوق." />
     <meta name="keywords" content="مدرس علوم, شرح علوم, فيزياء, كيمياء, أ. إسماعيل هشام, ثانوية عامة, تعليم تفاعلي, دروس علوم" />
@@ -10,18 +11,18 @@
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0B0F14" />
 
-    <link rel="canonical" href="https://ahmed-negm.pages.dev/ismail-hesham" />
-    <link rel="alternate" href="https://ahmed-negm.pages.dev/ismail-hesham" hreflang="ar" />
+    <link rel="canonical" href="https://ismail-hesham.pages.dev" />
+    <link rel="alternate" href="https://ismail-hesham.pages.dev" hreflang="ar" />
 
     <meta property="og:title" content="أ. إسماعيل هشام | مدرس علوم بروفيشنال" />
     <meta property="og:description" content="شرح النظريات والمفاهيم العلمية بطريقة مبسطة مع تطبيقات عملية ومنهج منظم للتفوق." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ahmed-negm.pages.dev/ismail-hesham" />
+    <meta property="og:url" content="https://ismail-hesham.pages.dev" />
     <meta property="og:site_name" content="أ. إسماعيل هشام" />
     <meta property="og:locale" content="ar_EG" />
     <meta property="og:image" content="https://files.catbox.moe/17xlmv.jpg" />
     <meta property="og:image:alt" content="أ. إسماعيل هشام" />
-
+        
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="أ. إسماعيل هشام | مدرس علوم بروفيشنال" />
     <meta name="twitter:description" content="شرح مبسّط مع تطبيقات عملية وأمثلة تفاعلية لتحقيق التفوق في العلوم." />
@@ -30,61 +31,336 @@
     <link rel="icon" href="https://files.catbox.moe/17xlmv.jpg" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;600;700;800&family=Lalezar&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
-                    colors: { accent: '#FF8A54', accent2: '#FF6B35' },
-                    fontFamily: { plex: ['IBM Plex Sans Arabic', 'system-ui', 'sans-serif'] }
+                    colors: {
+                        accent: '#FF8A54',
+                        accent2: '#FF6B35',
+                        neutralx: {
+                            25: '#FCFCFC',
+                            50: '#FAFAFA',
+                            100: '#F5F5F5',
+                            200: '#E5E7EB',
+                            300: '#D1D5DB',
+                            700: '#374151',
+                            800: '#1F2937',
+                            900: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        plex: ['IBM Plex Sans Arabic', 'system-ui', 'sans-serif'],
+                        brand: ['Lalezar', 'system-ui', 'sans-serif']
+                    }
                 }
             }
         }
     </script>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
     <style>
         :root { --font-display: 'Lalezar', system-ui, sans-serif; --font-body: 'IBM Plex Sans Arabic', system-ui, sans-serif }
         html { font-family: var(--font-body) }
         .brand-font { font-family: var(--font-display) }
         .no-tap-highlight { -webkit-tap-highlight-color: transparent }
-        *, *::before, *::after { box-shadow: none !important }
-        .transition-smooth { transition: all .3s ease-out }
-        #google_translate_element { display: none }
-        .goog-te-banner-frame { display: none !important }
-        body { top: 0 !important }
-        .btn-fixed { width: 11rem }
-        .btn-label { overflow: hidden; white-space: nowrap; text-overflow: ellipsis }
-        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,106,53,.6), transparent) }
+        .transition-smooth { transition: all .25s ease }
+        .glass { backdrop-filter: blur(8px) saturate(120%); -webkit-backdrop-filter: blur(8px) saturate(120%) }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,138,84,.7), rgba(255,107,53,.7), transparent) }
+        .gradient-text { background: linear-gradient(90deg, #FF8A54, #FF6B35); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent }
+        .animated-gradient-text { background: linear-gradient(120deg, #FF8A54, #FF6B35, #FF8A54); background-size: 200% 200%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: gradflow 5s ease infinite }
+        .mobile-menu { opacity: 0; transform: translateY(-10px) scale(.98); visibility: hidden; transition: opacity .25s ease, transform .25s ease, visibility .25s ease }
+        .mobile-menu.show { opacity: 1; transform: translateY(0) scale(1); visibility: visible }
+        .name-creative { position: relative; display: inline-block; padding-inline: .4rem }
+        .name-creative::after { content: ""; position: absolute; inset-inline: 10%; bottom: -6px; height: 10px; border-radius: 999px; background: radial-gradient(ellipse at center, rgba(255,138,84,.8), rgba(255,107,53,.5) 60%, transparent 70%); filter: blur(1px) }
+        @keyframes gradflow { 0% { background-position: 0% 50% } 50% { background-position: 100% 50% } 100% { background-position: 0% 50% } 
     </style>
-    <script>
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'ar', includedLanguages: 'ar,en', autoDisplay: false }, 'google_translate_element')
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.polyfilled.min.js" defer></script>
-    <script type="application/ld+json">
-        { "@context": "https://schema.org", "@type": "Person", "name": "أ. إسماعيل هشام", "jobTitle": "مدرس علوم بروفيشنال", "image": "https://files.catbox.moe/17xlmv.jpg", "url": "https://ahmed-negm.pages.dev/ismail-hesham", "sameAs": ["https://www.youtube.com/","https://www.facebook.com/"] }
-    </script>
-    <script type="application/ld+json">
-        { "@context": "https://schema.org", "@type": "WebSite", "name": "أ. إسماعيل هشام", "url": "https://ahmed-negm.pages.dev/ismail-hesham", "inLanguage": "ar" }
-    </script>
-    <script type="application/ld+json">
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://ahmed-negm.pages.dev/ismail-hesham#home" },
-            { "@type": "ListItem", "position": 2, "name": "الفيديوهات", "item": "https://ahmed-negm.pages.dev/ismail-hesham#videos" },
-            { "@type": "ListItem", "position": 3, "name": "تواصل", "item": "https://ahmed-negm.pages.dev/ismail-hesham#contact" }
-        ] }
-    </script>
 </head>
-<body class="bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 font-plex">
-    <div id="app"></div>
-    <div id="google_translate_element"></div>
+
+<body class="bg-white text-neutralx-900 dark:bg-neutralx-900 dark:text-neutralx-100 font-plex">
+
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 rounded-full px-5 py-3 w-[95%] md:w-[90%] max-w-6xl border transition-smooth glass bg-white/80 dark:bg-neutralx-900/85 border-neutralx-200 dark:border-neutralx-800">
+        <div class="flex items-center justify-between">
+            <div class="brand-font text-2xl md:text-3xl select-none transition-smooth gradient-text">أ. إسماعيل هشام</div>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#home" class="transition-smooth hover:text-accent active:scale-95 no-tap-highlight">الرئيسية</a>
+                <a href="#videos" class="transition-smooth hover:text-accent active:scale-95 no-tap-highlight">الڤيديوهات</a>
+                <a href="#contact" class="transition-smooth hover:text-accent active:scale-95 no-tap-highlight">تواصل</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="themeToggle" class="no-tap-highlight flex items-center gap-2 border px-3 py-2 rounded-full text-sm transition-smooth active:scale-95 border-accent text-neutralx-900 dark:text-neutralx-100 hover:bg-neutralx-900 hover:text-white dark:hover:bg-white dark:hover:text-neutralx-900">
+                    <span id="themeIconMoon" class="inline-flex"><i data-lucide="moon" class="w-5 h-5"></i></span>
+                    <span id="themeIconSun" class="inline-flex hidden"><i data-lucide="sun" class="w-5 h-5"></i></span>
+                    <span id="themeLabel" class="hidden md:inline">الوضع الليلي</span>
+                </button>
+                <button id="menuToggle" class="no-tap-highlight flex items-center gap-2 border px-3 py-2 rounded-full text-sm transition-smooth active:scale-95 border-accent text-neutralx-900 dark:text-neutralx-100 hover:bg-neutralx-900 hover:text-white dark:hover:bg-white dark:hover:text-neutralx-900 md:hidden">
+                    <span id="menuIconOpen" class="inline-flex"><i data-lucide="menu" class="w-5 h-5"></i></span>
+                    <span id="menuIconClose" class="inline-flex hidden"><i data-lucide="x" class="w-5 h-5"></i></span>
+                    <span class="hidden sm:inline">القائمة</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 z-40 flex items-start justify-center pt-28 bg-white/90 dark:bg-[#0B0F14]/90 backdrop-blur">
+        <div class="w-[92%] max-w-2xl rounded-2xl border border-neutralx-200 dark:border-neutralx-800 glass bg-white/90 dark:bg-[#0B0F14]/90 p-6">
+            <div class="flex items-center justify-between mb-4">
+                <div class="brand-font text-2xl gradient-text">القائمة</div>
+                <button id="closeMenu" class="no-tap-highlight flex items-center justify-center w-10 h-10 rounded-full border border-accent transition-smooth active:scale-95 hover:bg-neutralx-900 hover:text-white dark:hover:bg-white dark:hover:text-neutralx-900">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="flex flex-col items-stretch gap-3">
+                <a href="#home" class="w-full text-center px-4 py-3 rounded-xl border border-neutralx-200 dark:border-neutralx-800 transition-smooth hover:-translate-y-0.5 active:scale-95">الرئيسية</a>
+                <a href="#videos" class="w-full text-center px-4 py-3 rounded-xl border border-neutralx-200 dark:border-neutralx-800 transition-smooth hover:-translate-y-0.5 active:scale-95">الڤيديوهات</a>
+                <a href="#contact" class="w-full text-center px-4 py-3 rounded-xl border border-neutralx-200 dark:border-neutralx-800 transition-smooth hover:-translate-y-0.5 active:scale-95">تواصل</a>
+            </div>
+        </div>
+    </div>
+
+    <main id="home" class="overflow-x-hidden relative">
+        <section class="relative w-full pt-40">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <div class="inline-flex relative items-center border-2 border-accent2 gap-2 px-5 py-2 rounded-full mb-8 transition-smooth">
+                        <span class="text-sm font-semibold">مرحباً</span>
+                    </div>
+                    <div class="mb-8">
+                        <h1 class="text-4xl md:text-6xl font-extrabold mb-3 transition-smooth">
+                            <span class="brand-font text-4xl md:text-6xl align-middle">أ /</span>
+                            <span class="name-creative align-middle">
+                                <span class="brand-font animated-gradient-text drop-shadow-sm">إسماعيل هشام</span>
+                            </span>
+                        </h1>
+                        <h2 class="text-3xl md:text-5xl font-extrabold transition-smooth">مدرس علوم بروفيشنال</h2>
+                    </div>
+                    <p class="max-w-3xl mx-auto text-lg md:text-xl mb-10 leading-relaxed transition-smooth text-neutralx-700 dark:text-neutralx-300">
+                        شرح النظريات والمفاهيم العلمية بطريقة مبسطة مع تطبيقات عملية تساعدك على الفهم والإتقان. منهج منظم، أمثلة تفاعلية، وتدريب مكثّف للوصول إلى أعلى درجات التفوق.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-8 max-w-6xl mx-auto px-4">
+                    <div class="relative w-full">
+                        <img src="https://files.catbox.moe/17xlmv.jpg" alt="إسماعيل هشام" class="w-full max-h-[520px] object-cover rounded-3xl border border-neutralx-200 dark:border-neutralx-800 transition-smooth" />
+                        <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white dark:bg-[#0B0F14] rounded-full p-2 border border-neutralx-200 dark:border-neutralx-800 glass">
+                            <div class="flex gap-2">
+                                <a href="#videos" class="bg-neutralx-900 dark:bg-white dark:text-neutralx-900 text-white px-6 py-3 rounded-full font-extrabold text-sm w-40 h-12 flex items-center justify-center transition-smooth hover:-translate-y-0.5 active:scale-95">شاهد الآن</a>
+                                <a href="#contact" class="bg-white text-neutralx-900 border-2 border-neutralx-900 dark:bg-[#0B0F14] dark:text-white dark:border-white px-6 py-3 rounded-full font-extrabold text-sm w-40 h-12 flex items-center justify-center transition-smooth hover:-translate-y-0.5 active:scale-95">تواصل</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 text-center pt-10">
+                        <div>
+                            <div class="text-2xl font-extrabold mb-1 transition-smooth">+6</div>
+                            <div class="text-sm transition-smooth text-neutralx-700 dark:text-neutralx-300">خبرة سنين</div>
+                        </div>
+                        <div class="col-span-2">
+                            <div class="text-2xl font-extrabold mb-1 transition-smooth">العلوم</div>
+                            <div class="text-sm text-accent transition-smooth">من الصف الرابع الابتدائي ل الثاني الثانوي</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-6 my-14">
+            <div class="section-divider"></div>
+        </div>
+
+        <section id="videos" class="relative w-full py-8">
+            <div class="container mx-auto">
+                <div class="rounded-[1rem] px-6 md:px-10 py-12 transition-smooth bg-neutralx-900 text-white dark:bg-white dark:text-neutralx-900">
+                    <header class="text-center mb-10 flex flex-col items-center gap-4">
+                        <h2 class="text-4xl md:text-5xl font-extrabold relative transition-smooth">الڤيديوهات</h2>
+                    </header>
+                    <div id="videosGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container mx-auto px-6 my-14">
+            <div class="section-divider"></div>
+        </div>
+
+        <section id="contact" class="relative w-full py-14">
+            <div class="container mx-auto px-6 lg:px-16">
+                <div class="rounded-3xl border border-neutralx-200 dark:border-neutralx-800 p-8 text-center transition-smooth">
+                    <h3 class="text-2xl font-extrabold mb-3 transition-smooth">تواصل معايا 👀</h3>
+                    <p class="text-neutralx-700 dark:text-neutralx-300 mb-6 transition-smooth">تواصل مباشرة واحصل على إجابات سريعة ودعم مستمر.</p>
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <a href="https://wa.me/+966567624066" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-accent transition-smooth hover:-translate-y-0.5 active:scale-95 w-full sm:w-auto">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                            <span class="btn-label">واتساب</span>
+                        </a>
+                        <a href="mailto:ismaelhesham99@gmail.com" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full transition-smooth hover:-translate-y-0.5 active:scale-95 w-full sm:w-auto bg-accent text-white">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            <span class="btn-label">بريد إلكتروني</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ismael-hesham-7561782b2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full transition-smooth hover:-translate-y-0.5 active:scale-95 w-full sm:w-auto bg-accent2 text-white">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                            <span class="btn-label">لينكد إن</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="w-full h-[0.3px] bg-gradient-to-r from-accent via-accent2 to-accent"></div>
+
+    <footer class="bg-[#0B0F14] text-[#E6E6E6] py-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-right">
+                    <div class="brand-font text-2xl mb-3 text-white transition-smooth">أ. إسماعيل هشام</div>
+                    <p class="text-[#C9CDD2] text-md leading-relaxed transition-smooth">نعلّم العلوم بطرق عملية وتطبيقات واقعية لتكون أقوى في الفهم والحل.</p>
+                </div>
+                <div class="text-right">
+                    <h3 class="text-accent text-2xl font-bold mb-4 transition-smooth">روابط سريعة</h3>
+                    <div class="space-y-2">
+                        <a href="#home" class="block text-[#E6E6E6] text-md underline hover:text-accent transition-smooth active:scale-95">الرئيسية</a>
+                        <a href="#videos" class="block text-[#E6E6E6] text-md underline hover:text-accent transition-smooth active:scale-95">الڤيديوهات</a>
+                        <a href="#contact" class="block text-[#E6E6E6] text-md underline hover:text-accent transition-smooth active:scale-95">تواصل</a>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+            <hr class="border-[#27303A] my-6" />
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-[#9AA3AD] text-sm">© <span id="year"></span> جميع الحقوق محفوظة</div>
+                <a href="https://ahmed-negm.pages.dev" target="_blank" rel="noopener noreferrer" class="text-accent underline text-sm">Made with ❤️ by Ahmed Negm</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function setInitialTheme() {
+            const html = document.documentElement
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+            const saved = localStorage.getItem('theme')
+            const isDark = saved ? saved === 'dark' : prefersDark
+            if (isDark) html.classList.add('dark')
+        }
+        setInitialTheme()
+
+        function updateThemeColorMeta() {
+            const meta = document.querySelector('meta[name="theme-color"]')
+            const isDarkNow = document.documentElement.classList.contains('dark')
+            meta.setAttribute('content', isDarkNow ? '#0B0F14' : '#FFFFFF')
+        }
+        updateThemeColorMeta()
+
+        function ensureLucide() {
+            function ready() {
+                if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                    window.lucide.createIcons()
+                } else {
+                    setTimeout(ready, 50)
+                }
+            }
+            ready()
+        }
+        ensureLucide()
+
+        function updateThemeUI() {
+            const isDark = document.documentElement.classList.contains('dark')
+            const moon = document.getElementById('themeIconMoon')
+            const sun = document.getElementById('themeIconSun')
+            const label = document.getElementById('themeLabel')
+            if (moon && sun) {
+                moon.classList.toggle('hidden', isDark)
+                sun.classList.toggle('hidden', !isDark)
+            }
+            if (label) label.textContent = isDark ? 'الوضع النهاري' : 'الوضع الليلي'
+        }
+        updateThemeUI()
+
+        function bindUI() {
+            const themeToggle = document.getElementById('themeToggle')
+            const menuToggle = document.getElementById('menuToggle')
+            const closeBtn = document.getElementById('closeMenu')
+            const mobileMenu = document.getElementById('mobileMenu')
+            const menuIconOpen = document.getElementById('menuIconOpen')
+            const menuIconClose = document.getElementById('menuIconClose')
+
+            function openMenu() {
+                mobileMenu.classList.add('show')
+                document.body.style.overflow = 'hidden'
+                menuIconOpen.classList.add('hidden')
+                menuIconClose.classList.remove('hidden')
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.remove('show')
+                document.body.style.overflow = ''
+                menuIconOpen.classList.remove('hidden')
+                menuIconClose.classList.add('hidden')
+            }
+
+            themeToggle.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark')
+                localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light')
+                updateThemeUI()
+                updateThemeColorMeta()
+            })
+
+            menuToggle.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('show')) closeMenu()
+                else openMenu()
+            })
+
+            closeBtn.addEventListener('click', closeMenu)
+
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) closeMenu()
+            })
+
+            document.querySelectorAll('#mobileMenu a[href^="#"]').forEach(a => a.addEventListener('click', closeMenu))
+        }
+        bindUI()
+
+        const videosData = []
+        const videoPoster = 'https://files.catbox.moe/i6dj6j.jpg'
+
+        function renderVideos() {
+            const grid = document.getElementById('videosGrid')
+            grid.innerHTML = ''
+            if (!videosData.length) {
+                grid.innerHTML = '<p class="text-center">لا توجد فيديوهات حالياً</p>'
+                return
+            }
+            videosData.forEach((v, i) => {
+                const n = String(i + 1).padStart(2, '0')
+                const card = document.createElement('div')
+                card.className = 'relative bg-white dark:bg-[#0B0F14] rounded-2xl p-4 border border-neutralx-200 dark:border-neutralx-800 transition-smooth'
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <span class="brand-font gradient-text text-xl">${n}</span>
+                            <h3 class="font-bold transition-smooth text-black dark:text-white">${v.title}</h3>
+                        </div>
+                    </div>
+                    <video class="rounded-xl overflow-hidden w-full h-52 bg-black" playsinline controls preload="none" poster="${videoPoster}">
+                        <source src="${v.src}" type="video/mp4" />
+                    </video>
+                `
+                grid.appendChild(card)
+            })
+        }
+        renderVideos()
+
+        function setFooterYear() {
+            const y = document.getElementById('year')
+            if (y) y.textContent = new Date().getFullYear()
+        }
+        setFooterYear()
+    </script>
 </body>
-<script src="script.js"></script>
 </html>
